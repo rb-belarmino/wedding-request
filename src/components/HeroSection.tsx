@@ -15,7 +15,7 @@ export default function HeroSection() {
           className="object-cover object-center"
         />
         {/* Overlay escuro para destacar o texto */}
-        <div className="absolute inset-0 bg-black/40 bg-linear-to-t from-black/60 to-transparent" />
+        <div className="absolute inset-0 bg-black/10 bg-linear-to-t from-black/60 to-transparent" />
       </div>
 
       <motion.div
