@@ -58,7 +58,7 @@ export default function VideoSection() {
         </h2>
         <div className="h-[2px] w-16 bg-gold mx-auto mt-6 mb-16 rounded-full"></div>
 
-        <div className="relative w-full aspect-4/3 md:aspect-video rounded-4xl overflow-hidden shadow-2xl border-4 border-white group cursor-pointer transition-transform hover:scale-[1.02] duration-500">
+        <div className="relative w-full aspect-9/16 md:aspect-video rounded-3xl md:rounded-4xl overflow-hidden shadow-2xl border-4 border-white group cursor-pointer transition-transform hover:scale-[1.02] duration-500">
           <video
             ref={videoRef}
             src="/lolinha.mp4"
