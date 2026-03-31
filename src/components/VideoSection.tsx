@@ -26,6 +26,24 @@ export default function VideoSection() {
     }
   }
 
+  const handleEnded = () => {
+    setIsPlaying(false)
+    
+    // Minimize the video only on mobile devices (width < 768px)
+    if (window.innerWidth < 768) {
+      if (document.exitFullscreen) {
+        document.exitFullscreen().catch((err: any) => console.log(err))
+      } else if ((document as any).webkitExitFullscreen) {
+        (document as any).webkitExitFullscreen() /* Safari */
+      } else if (videoRef.current) {
+        const videoElement = videoRef.current as any
+        if (videoElement.webkitExitFullscreen) {
+          videoElement.webkitExitFullscreen() /* iOS Safari fallback */
+        }
+      }
+    }
+  }
+
   return (
     <section className="py-32 bg-background px-6 text-center">
       <motion.div
@@ -49,7 +67,7 @@ export default function VideoSection() {
             controls={isPlaying}
             onPlay={() => setIsPlaying(true)}
             onPause={() => setIsPlaying(false)}
-            onEnded={() => setIsPlaying(false)}
+            onEnded={handleEnded}
           />
           {!isPlaying && (
             <div
