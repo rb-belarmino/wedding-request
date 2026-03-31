@@ -1,0 +1,9 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <rect width="256" height="256" rx="64" fill="#F6EFEA"/>
+  <!-- Gold ring -->
+  <circle cx="104" cy="144" r="56" fill="none" stroke="#D4AF37" stroke-width="16" />
+  <!-- Rose ring -->
+  <circle cx="152" cy="112" r="56" fill="none" stroke="#E0BFB8" stroke-width="16" />
+  <!-- Overlapping arcs to create the intertwined illusion -->
+  <path d="M64 102 A56 56 0 0 1 129 94" fill="none" stroke="#D4AF37" stroke-width="16" />
+</svg>
