@@ -8,7 +8,7 @@ export default function HeroSection() {
     <section className="relative w-full h-dvh flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/igreja.jpg"
+          src="/fotos/igreja.jpg"
           alt="Rodrigo e Jéssica"
           fill
           priority
