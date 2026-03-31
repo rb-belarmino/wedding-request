@@ -11,6 +11,18 @@ export default function VideoSection() {
     if (videoRef.current) {
       videoRef.current.play()
       setIsPlaying(true)
+      
+      // Maximize the video only on mobile devices (width < 768px)
+      if (window.innerWidth < 768) {
+        const videoElement = videoRef.current as any
+        if (videoElement.requestFullscreen) {
+          videoElement.requestFullscreen().catch((err: any) => console.log(err))
+        } else if (videoElement.webkitRequestFullscreen) {
+          videoElement.webkitRequestFullscreen() /* Safari */
+        } else if (videoElement.webkitEnterFullscreen) {
+          videoElement.webkitEnterFullscreen() /* iOS Safari fallback */
+        }
+      }
     }
   }
 
